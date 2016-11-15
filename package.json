@@ -1,0 +1,28 @@
+{
+  "name": "online-store",
+  "version": "1.0.0",
+  "description": "Online store for Refactor by example",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint .",
+    "coverage": "istanbul cover _mocha -- -R dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nspragg/online-store.git"
+  },
+  "author": "ibl-team@lists.forge.bbc.co.uk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nspragg/online-store/issues"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "homepage": "https://github.com/nspragg/online-store",
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "istanbul": "^0.4.1"
+  }
+}
