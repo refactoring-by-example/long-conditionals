@@ -3,11 +3,8 @@
 const assert = require('assert');
 const getTitles = require('../lib/titles');
 
-const FICTIONAL_BOOK = 'book-fiction';
-const NON_FICTIONAL_BOOK = 'book-non-fiction';
-const TRAVEL_GUIDE = 'book-travel-guide';
-const BLU_RAY_FILM = 'blu-ray-film';
-const BLU_RAY_BOX_SET = 'blu-ray-box-set';
+const BOOK = 'book';
+const BLU_RAY = 'blu-ray';
 const VINYL_RECORD = 'vinyl-record';
 
 describe('Titles', () => {
@@ -15,10 +12,12 @@ describe('Titles', () => {
     let titles;
     const bookTitle = 'Charles Dickens';
     const author = 'A Tale of Two Cities';
+    const kind = 'fiction';
 
     beforeEach(() => {
       titles = getTitles({
-        productType: FICTIONAL_BOOK,
+        productType: BOOK,
+        kind,
         bookTitle,
         author
       });
@@ -38,10 +37,12 @@ describe('Titles', () => {
     const author = 'Douglas Crockford';
     const bookTitle = 'Javascript the good parts';
     const year = '2008';
+    const kind = 'non-fiction';
 
     beforeEach(() => {
       titles = getTitles({
-        productType: NON_FICTIONAL_BOOK,
+        productType: BOOK,
+        kind,
         bookTitle,
         author,
         year: year
@@ -62,10 +63,12 @@ describe('Titles', () => {
     const city = 'Berlin';
     const publisher = 'Lonely Planet';
     const year = '2016';
+    const kind = 'travel-guide';
 
     beforeEach(() => {
       titles = getTitles({
-        productType: TRAVEL_GUIDE,
+        productType: BOOK,
+        kind,
         city,
         publisher,
         year
@@ -86,13 +89,15 @@ describe('Titles', () => {
     const title = 'Predator';
     const year = '1987';
     const director = 'John McTiernan';
+    const kind = 'film';
 
     beforeEach(() => {
       titles = getTitles({
-        productType: BLU_RAY_FILM,
+        productType: BLU_RAY,
         title,
         year,
-        director
+        director,
+        kind
       });
     });
 
@@ -110,13 +115,15 @@ describe('Titles', () => {
     const showName = 'Game of Thrones';
     const seasonNumber = 6;
     const year = '2016';
+    const kind = 'box-set';
 
     beforeEach(() => {
       titles = getTitles({
-        productType: BLU_RAY_BOX_SET,
+        productType: BLU_RAY,
         showName,
         seasonNumber,
-        year
+        year,
+        kind
       });
     });
 
