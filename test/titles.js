@@ -6,6 +6,7 @@ const getTitles = require('../lib/titles');
 const BOOK = 'book';
 const BLU_RAY = 'blu-ray';
 const VINYL_RECORD = 'vinyl-record';
+const DIGITAL_VIDEO_DISC = 'dvd';
 
 describe('Titles', () => {
   describe('when the type is fictional book', () => {
@@ -155,6 +156,54 @@ describe('Titles', () => {
 
     it('returns the artist name as the subtitle', () => {
       assert.equal(titles.subtitle, artistName);
+    });
+  });
+
+  describe('when the type is a vinyl record', () => {
+    let titles;
+    const albumName = 'Hardwired... to Self-Destruct';
+    const artistName = 'Metallica';
+
+    beforeEach(() => {
+      titles = getTitles({
+        productType: VINYL_RECORD,
+        albumName,
+        artistName
+      });
+    });
+
+    it('returns the album name as the title', () => {
+      assert.equal(titles.title, albumName);
+    });
+
+    it('returns the artist name as the subtitle', () => {
+      assert.equal(titles.subtitle, artistName);
+    });
+  });
+
+  describe('when the type is a digit video disc', () => {
+    let titles;
+    const title = 'Edge of Tomorrow (live die repeat)';
+    const year = '2014';
+    const director = 'Doug Liman';
+    const kind = 'film';
+
+    beforeEach(() => {
+      titles = getTitles({
+        productType: DIGITAL_VIDEO_DISC,
+        title,
+        year,
+        director,
+        kind
+      });
+    });
+
+    it('returns the film title and year as the title', () => {
+      assert.equal(titles.title, `${title} (${year})`);
+    });
+
+    it('returns the director as the subtitle', () => {
+      assert.equal(titles.subtitle, director);
     });
   });
 });
