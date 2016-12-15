@@ -1,24 +1,15 @@
 # online-store
 
-> Online store for Refactor by example
+> A practical example of dealing with long conditionals
 
 ## Installation
 
 ```
-npm install --save @ibl/online-store
+git clone https://github.com/refactoring-by-example/long-conditionals
 ```
-
-## Rules
-
 
 ## Test
 
 ```
 npm test
-```
-
-To generate a test coverage report:
-
-```
-npm run coverage
 ```

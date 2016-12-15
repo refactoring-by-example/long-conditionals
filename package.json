@@ -1,7 +1,7 @@
 {
-  "name": "online-store",
+  "name": "long-conditionals",
   "version": "1.0.0",
-  "description": "Online store for Refactor by example",
+  "description": "Dealing with long conditionals",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -10,19 +10,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nspragg/online-store.git"
+    "url": "https://github.com/refactoring-by-example/long-conditionals"
   },
-  "author": "ibl-team@lists.forge.bbc.co.uk",
-  "license": "ISC",
+  "author": "nspragg@gmail.com",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nspragg/online-store/issues"
+    "url": "https://github.com/refactoring-by-example/long-conditionals/issues"
   },
   "engines": {
     "node": ">=4.0.0"
   },
-  "homepage": "https://github.com/nspragg/online-store",
+  "homepage": "https://github.com/refactoring-by-example/long-conditionals",
   "devDependencies": {
     "mocha": "^2.1.0",
     "istanbul": "^0.4.1"
+  },
+  "dependencies": {
+    "filehound": "^1.14.2"
   }
 }
